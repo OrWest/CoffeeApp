@@ -77,12 +77,8 @@
 		974E2DA72781CB8A0047F6B6 /* Coffee */ = {
 			isa = PBXGroup;
 			children = (
-				974E2DA82781CB8A0047F6B6 /* CoffeeApp.swift */,
-				974E2DAA2781CB8A0047F6B6 /* ContentView.swift */,
-				974E2DAC2781CB8D0047F6B6 /* Assets.xcassets */,
-				974E2DB12781CB8D0047F6B6 /* Persistence.swift */,
-				974E2DB32781CB8D0047F6B6 /* Coffee.xcdatamodeld */,
-				974E2DAE2781CB8D0047F6B6 /* Preview Content */,
+				974E2DD72781CE450047F6B6 /* Sources */,
+				974E2DD82781CE520047F6B6 /* Resources */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -101,6 +97,42 @@
 				974E2DBE2781CB8D0047F6B6 /* CoffeeTests.swift */,
 			);
 			path = CoffeeTests;
+			sourceTree = "<group>";
+		};
+		974E2DD72781CE450047F6B6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				974E2DDA2781CE780047F6B6 /* Services */,
+				974E2DD92781CE6F0047F6B6 /* Screens */,
+				974E2DA82781CB8A0047F6B6 /* CoffeeApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		974E2DD82781CE520047F6B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				974E2DAC2781CB8D0047F6B6 /* Assets.xcassets */,
+				974E2DB32781CB8D0047F6B6 /* Coffee.xcdatamodeld */,
+				974E2DAE2781CB8D0047F6B6 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		974E2DD92781CE6F0047F6B6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				974E2DAA2781CB8A0047F6B6 /* ContentView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		974E2DDA2781CE780047F6B6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				974E2DB12781CB8D0047F6B6 /* Persistence.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
