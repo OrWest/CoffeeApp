@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoffeeInfo" representedClassName="CoffeeInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="caffeineMgIn100ml" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="largeML" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="mediumML" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="smallML" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="shots" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoffeeShot" inverseName="coffeeInfo" inverseEntity="CoffeeShot"/>
+    </entity>
+    <entity name="CoffeeShot" representedClassName="CoffeeShot" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="ml" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="coffeeInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoffeeInfo" inverseName="shots" inverseEntity="CoffeeInfo"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="CoffeeShot" positionX="-63" positionY="-9" width="128" height="74"/>
+        <element name="CoffeeInfo" positionX="-54" positionY="0" width="128" height="119"/>
     </elements>
 </model>
