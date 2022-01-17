@@ -9,7 +9,9 @@ import SwiftUI
 
 struct TabBarButton: View {
     let icon: Image
-    let isActive: Bool
+    @State var isActive: Bool
+    var action: (() -> Void)?
+    
     
     var side: CGFloat { isActive ? 50 : 30 }
     
@@ -18,7 +20,7 @@ struct TabBarButton: View {
             Image(systemName: "")
                 .frame(width: 50, height: 50)
             Button(action: {
-                
+                action?()
             }, label: {
                 icon
                     .resizable()
@@ -35,7 +37,7 @@ struct TabBarButton: View {
 
 struct TabBarButton_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarButton(icon: Image(systemName: "chart.xyaxis.line"), isActive: false)
+        TabBarButton(icon: Image(systemName: "chart.xyaxis.line"), isActive: false, action: nil)
             .previewLayout(.sizeThatFits)
     }
 }
