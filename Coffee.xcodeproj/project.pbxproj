@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		970C3E19279437C800BB0903 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970C3E18279437C800BB0903 /* TabBarView.swift */; };
+		9723A2E22794A276003F14B2 /* CoffeeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9723A2DC2794A276003F14B2 /* CoffeeRate.swift */; };
+		9723A2E52794A276003F14B2 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9723A2DF2794A276003F14B2 /* Formatter.swift */; };
+		9723A2E62794A276003F14B2 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9723A2E12794A276003F14B2 /* Date+extension.swift */; };
 		973E7B152794415500C8D7B0 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973E7B142794415500C8D7B0 /* TabBarButton.swift */; };
 		974E2DA92781CB8A0047F6B6 /* CoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E2DA82781CB8A0047F6B6 /* CoffeeApp.swift */; };
 		974E2DAB2781CB8A0047F6B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E2DAA2781CB8A0047F6B6 /* ContentView.swift */; };
@@ -16,6 +19,7 @@
 		974E2DB22781CB8D0047F6B6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E2DB12781CB8D0047F6B6 /* Persistence.swift */; };
 		974E2DB52781CB8D0047F6B6 /* Coffee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 974E2DB32781CB8D0047F6B6 /* Coffee.xcdatamodeld */; };
 		974E2DBF2781CB8D0047F6B6 /* CoffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E2DBE2781CB8D0047F6B6 /* CoffeeTests.swift */; };
+		975A2088279D631000F3F58E /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975A2087279D631000F3F58E /* TabBarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +34,11 @@
 
 /* Begin PBXFileReference section */
 		970C3E18279437C800BB0903 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		9723A2DC2794A276003F14B2 /* CoffeeRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeRate.swift; sourceTree = "<group>"; };
+		9723A2DD2794A276003F14B2 /* StartupConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupConfigurator.swift; sourceTree = "<group>"; };
+		9723A2DE2794A276003F14B2 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		9723A2DF2794A276003F14B2 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		9723A2E12794A276003F14B2 /* Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		973E7B142794415500C8D7B0 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		974E2DA52781CB8A0047F6B6 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		974E2DA82781CB8A0047F6B6 /* CoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeApp.swift; sourceTree = "<group>"; };
@@ -40,6 +49,7 @@
 		974E2DB42781CB8D0047F6B6 /* Coffee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Coffee.xcdatamodel; sourceTree = "<group>"; };
 		974E2DBA2781CB8D0047F6B6 /* CoffeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		974E2DBE2781CB8D0047F6B6 /* CoffeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTests.swift; sourceTree = "<group>"; };
+		975A2087279D631000F3F58E /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9723A2DB2794A267003F14B2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9723A2E02794A276003F14B2 /* Extension */,
+				9723A2DC2794A276003F14B2 /* CoffeeRate.swift */,
+				9723A2DF2794A276003F14B2 /* Formatter.swift */,
+				9723A2DE2794A276003F14B2 /* HealthManager.swift */,
+				9723A2DD2794A276003F14B2 /* StartupConfigurator.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9723A2E02794A276003F14B2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9723A2E12794A276003F14B2 /* Date+extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		973E7B132794414900C8D7B0 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +144,7 @@
 		974E2DD72781CE450047F6B6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9723A2DB2794A267003F14B2 /* Helper */,
 				974E2DDA2781CE780047F6B6 /* Services */,
 				974E2DD92781CE6F0047F6B6 /* Screens */,
 				974E2DA82781CB8A0047F6B6 /* CoffeeApp.swift */,
@@ -137,6 +168,7 @@
 				973E7B132794414900C8D7B0 /* TabBar */,
 				974E2DAA2781CB8A0047F6B6 /* ContentView.swift */,
 				970C3E18279437C800BB0903 /* TabBarView.swift */,
+				975A2087279D631000F3F58E /* TabBarViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -249,9 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975A2088279D631000F3F58E /* TabBarViewModel.swift in Sources */,
 				974E2DB22781CB8D0047F6B6 /* Persistence.swift in Sources */,
+				9723A2E52794A276003F14B2 /* Formatter.swift in Sources */,
 				974E2DAB2781CB8A0047F6B6 /* ContentView.swift in Sources */,
+				9723A2E22794A276003F14B2 /* CoffeeRate.swift in Sources */,
 				974E2DA92781CB8A0047F6B6 /* CoffeeApp.swift in Sources */,
+				9723A2E62794A276003F14B2 /* Date+extension.swift in Sources */,
 				970C3E19279437C800BB0903 /* TabBarView.swift in Sources */,
 				974E2DB52781CB8D0047F6B6 /* Coffee.xcdatamodeld in Sources */,
 				973E7B152794415500C8D7B0 /* TabBarButton.swift in Sources */,

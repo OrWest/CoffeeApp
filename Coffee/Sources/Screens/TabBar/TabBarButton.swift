@@ -9,9 +9,8 @@ import SwiftUI
 
 struct TabBarButton: View {
     let icon: Image
-    @State var isActive: Bool
+    var isActive: Bool
     var action: (() -> Void)?
-    
     
     var side: CGFloat { isActive ? 50 : 30 }
     

@@ -6,7 +6,7 @@
         <attribute name="mediumML" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="smallML" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="shots" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoffeeShot" inverseName="coffeeInfo" inverseEntity="CoffeeShot"/>
+        <relationship name="shots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoffeeShot" inverseName="coffeeInfo" inverseEntity="CoffeeShot"/>
     </entity>
     <entity name="CoffeeShot" representedClassName="CoffeeShot" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -14,7 +14,7 @@
         <relationship name="coffeeInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoffeeInfo" inverseName="shots" inverseEntity="CoffeeInfo"/>
     </entity>
     <elements>
-        <element name="CoffeeShot" positionX="-63" positionY="-9" width="128" height="74"/>
         <element name="CoffeeInfo" positionX="-54" positionY="0" width="128" height="119"/>
+        <element name="CoffeeShot" positionX="-63" positionY="-9" width="128" height="74"/>
     </elements>
 </model>

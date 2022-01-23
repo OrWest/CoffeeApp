@@ -16,36 +16,13 @@ extension Array {
 }
 
 struct TabBarView: View {
-    enum Tab: Int, Identifiable, Equatable, CaseIterable {
-        var id: Int { rawValue }
-        
-        case insights
-        case dashboard
-        case settings
-    }
-
-    private struct TabAppearance {
-        let image: Image
-        
-        init(tab: Tab) {
-            switch tab {
-            case .insights:
-                image = Image(systemName: "chart.xyaxis.line")
-            case .dashboard:
-                image = Image(systemName: "cup.and.saucer")
-            case .settings:
-                image = Image(systemName: "gear")
-            }
-        }
-    }
-    
-    @State var selectedTab: Tab
+    @ObservedObject var viewModel: TabBarViewModel
     
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
-            ForEach(Tab.allCases) { tab in
-                TabBarButton(icon: TabAppearance(tab: tab).image, isActive: selectedTab == tab) {
-                    switch tab {
+            ForEach(viewModel.tabs) { tab in
+                TabBarButton(icon: tab.image, isActive: tab.isActive) {
+                    switch tab.tab {
                     case .insights:
                         insightsSelected()
                     case .dashboard:
@@ -58,20 +35,20 @@ struct TabBarView: View {
         }
     }
     
-    init(selectedTab: Tab = .dashboard) {
-        self.selectedTab = selectedTab
+    init(selectedTab: TabBarViewModel.Tab = .dashboard) {
+        viewModel = TabBarViewModel(selectedTab: selectedTab)
     }
     
     private func dashboardSelected() {
-        self.selectedTab = .dashboard
+        viewModel.selectedTab = .dashboard
     }
     
     private func insightsSelected() {
-        self.selectedTab = .insights
+        viewModel.selectedTab = .insights
     }
     
     private func settingsSelected() {
-        self.selectedTab = .settings
+        viewModel.selectedTab = .settings
     }
 }
 
