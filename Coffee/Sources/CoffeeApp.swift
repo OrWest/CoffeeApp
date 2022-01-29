@@ -13,7 +13,7 @@ struct CoffeeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBarContainer()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

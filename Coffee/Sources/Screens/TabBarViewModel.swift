@@ -37,17 +37,17 @@ class TabBarViewModel: ObservableObject {
         }
     }
     
-    var selectedTab: Tab {
+    @Binding var selectedTab: Tab {
         didSet {
             tabs = TabBarViewModel.getTabsAppearance(selectedTab: selectedTab)
         }
     }
     @Published private(set) var tabs: [TabAppearance]
     
-    init(selectedTab: Tab) {
-        self.selectedTab = selectedTab
+    init(selectedTab: Binding<Tab>) {
+        self._selectedTab = selectedTab
         
-        self.tabs = TabBarViewModel.getTabsAppearance(selectedTab: selectedTab)
+        self.tabs = TabBarViewModel.getTabsAppearance(selectedTab: selectedTab.wrappedValue)
     }
     
     private static func getTabsAppearance(selectedTab: Tab) -> [TabAppearance] {

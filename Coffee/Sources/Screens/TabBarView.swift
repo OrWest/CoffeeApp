@@ -35,30 +35,38 @@ struct TabBarView: View {
         }
     }
     
-    init(selectedTab: TabBarViewModel.Tab = .dashboard) {
-        viewModel = TabBarViewModel(selectedTab: selectedTab)
-    }
-    
     private func dashboardSelected() {
-        viewModel.selectedTab = .dashboard
+        withAnimation {
+            viewModel.selectedTab = .dashboard
+        }
     }
     
     private func insightsSelected() {
-        viewModel.selectedTab = .insights
+        withAnimation {
+            viewModel.selectedTab = .insights
+        }
     }
     
     private func settingsSelected() {
-        viewModel.selectedTab = .settings
+        withAnimation {
+            viewModel.selectedTab = .settings            
+        }
     }
+}
+
+extension TabBarViewModel {
+    static let stubInsights = TabBarViewModel(selectedTab: Binding<Tab>.init(get: { .insights }, set: {_ in}))
+    static let stubDashboard = TabBarViewModel(selectedTab: Binding<Tab>.init(get: { .dashboard }, set: {_ in}))
+    static let stubSettings = TabBarViewModel(selectedTab: Binding<Tab>.init(get: { .settings }, set: {_ in}))
 }
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView(selectedTab: .insights)
+        TabBarView(viewModel: .stubInsights)
             .previewLayout(PreviewLayout.fixed(width: 300, height: 80))
-        TabBarView(selectedTab: .dashboard)
+        TabBarView(viewModel: .stubDashboard)
             .previewLayout(PreviewLayout.fixed(width: 300, height: 80))
-        TabBarView(selectedTab: .settings)
+        TabBarView(viewModel: .stubSettings)
             .previewLayout(PreviewLayout.fixed(width: 300, height: 80))
     }
 }
