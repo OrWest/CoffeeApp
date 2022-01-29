@@ -1,5 +1,5 @@
 //
-//  TabBarContainer.swift
+//  TabBarContainerView.swift
 //  Coffee
 //
 //  Created by Aleksandr Motarykin on 29.01.22.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct TabBarContainer: View {
+struct TabBarContainerView: View {
+    private static let tabBarBottomPadding: CGFloat = 20
+    static let tabBarHeight = TabBarButton.maxSize + tabBarBottomPadding * 2
     
     @State var activeTab: TabBarViewModel.Tab = .dashboard
     
@@ -17,7 +19,7 @@ struct TabBarContainer: View {
             VStack {
                 Spacer()
                 TabBarView(viewModel: TabBarViewModel(selectedTab: $activeTab))
-                    .padding([.bottom], 20)
+                    .padding([.bottom], TabBarContainerView.tabBarBottomPadding)
             }
         }
     }
@@ -26,7 +28,7 @@ struct TabBarContainer: View {
         let view: AnyView
         
         switch activeTab {
-            case .dashboard: view = AnyView(Color.red.ignoresSafeArea())
+            case .dashboard: view = AnyView(DashboardView())
             case .insights: view = AnyView(Color.green.ignoresSafeArea())
             case .settings: view = AnyView(Color.blue.ignoresSafeArea())
         }
@@ -37,6 +39,6 @@ struct TabBarContainer: View {
 
 struct TabBarContainer_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarContainer()
+        TabBarContainerView()
     }
 }

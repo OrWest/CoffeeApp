@@ -11,7 +11,9 @@
 		9723A2E22794A276003F14B2 /* CoffeeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9723A2DC2794A276003F14B2 /* CoffeeRate.swift */; };
 		9723A2E52794A276003F14B2 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9723A2DF2794A276003F14B2 /* Formatter.swift */; };
 		9723A2E62794A276003F14B2 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9723A2E12794A276003F14B2 /* Date+extension.swift */; };
-		972C58D027A5558B003645CA /* TabBarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C58CF27A5558B003645CA /* TabBarContainer.swift */; };
+		972C58D027A5558B003645CA /* TabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C58CF27A5558B003645CA /* TabBarContainerView.swift */; };
+		972C58D227A55AAE003645CA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C58D127A55AAE003645CA /* DashboardView.swift */; };
+		972C58D427A55D5B003645CA /* AddShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972C58D327A55D5B003645CA /* AddShotView.swift */; };
 		973E7B152794415500C8D7B0 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973E7B142794415500C8D7B0 /* TabBarButton.swift */; };
 		974E2DA92781CB8A0047F6B6 /* CoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E2DA82781CB8A0047F6B6 /* CoffeeApp.swift */; };
 		974E2DAB2781CB8A0047F6B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974E2DAA2781CB8A0047F6B6 /* ContentView.swift */; };
@@ -40,7 +42,9 @@
 		9723A2DE2794A276003F14B2 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		9723A2DF2794A276003F14B2 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		9723A2E12794A276003F14B2 /* Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
-		972C58CF27A5558B003645CA /* TabBarContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainer.swift; sourceTree = "<group>"; };
+		972C58CF27A5558B003645CA /* TabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerView.swift; sourceTree = "<group>"; };
+		972C58D127A55AAE003645CA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		972C58D327A55D5B003645CA /* AddShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShotView.swift; sourceTree = "<group>"; };
 		973E7B142794415500C8D7B0 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		974E2DA52781CB8A0047F6B6 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		974E2DA82781CB8A0047F6B6 /* CoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeApp.swift; sourceTree = "<group>"; };
@@ -171,7 +175,9 @@
 				974E2DAA2781CB8A0047F6B6 /* ContentView.swift */,
 				970C3E18279437C800BB0903 /* TabBarView.swift */,
 				975A2087279D631000F3F58E /* TabBarViewModel.swift */,
-				972C58CF27A5558B003645CA /* TabBarContainer.swift */,
+				972C58CF27A5558B003645CA /* TabBarContainerView.swift */,
+				972C58D127A55AAE003645CA /* DashboardView.swift */,
+				972C58D327A55D5B003645CA /* AddShotView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -285,7 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				975A2088279D631000F3F58E /* TabBarViewModel.swift in Sources */,
+				972C58D227A55AAE003645CA /* DashboardView.swift in Sources */,
 				974E2DB22781CB8D0047F6B6 /* Persistence.swift in Sources */,
+				972C58D427A55D5B003645CA /* AddShotView.swift in Sources */,
 				9723A2E52794A276003F14B2 /* Formatter.swift in Sources */,
 				974E2DAB2781CB8A0047F6B6 /* ContentView.swift in Sources */,
 				9723A2E22794A276003F14B2 /* CoffeeRate.swift in Sources */,
@@ -294,7 +302,7 @@
 				970C3E19279437C800BB0903 /* TabBarView.swift in Sources */,
 				974E2DB52781CB8D0047F6B6 /* Coffee.xcdatamodeld in Sources */,
 				973E7B152794415500C8D7B0 /* TabBarButton.swift in Sources */,
-				972C58D027A5558B003645CA /* TabBarContainer.swift in Sources */,
+				972C58D027A5558B003645CA /* TabBarContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

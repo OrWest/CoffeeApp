@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct TabBarButton: View {
+    static let maxSize: CGFloat = 50
+    
     let icon: Image
     var isActive: Bool
     var action: (() -> Void)?
     
-    var side: CGFloat { isActive ? 50 : 30 }
+    var side: CGFloat { isActive ? TabBarButton.maxSize : 30 }
     
     var body: some View {
         ZStack {
             Image(systemName: "")
-                .frame(width: 50, height: 50)
+                .frame(width: TabBarButton.maxSize,
+                       height: TabBarButton.maxSize)
             Button(action: {
                 action?()
             }, label: {
