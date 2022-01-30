@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CoffeeInfo" representedClassName="CoffeeInfo" syncable="YES" codeGenerationType="class">
-        <attribute name="caffeineMgIn100ml" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="largeML" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="mediumML" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="smallML" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="shots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoffeeShot" inverseName="coffeeInfo" inverseEntity="CoffeeShot"/>
+    <entity name="CoffeeInfoEntity" representedClassName="CoffeeInfoEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="caffeineMgIn100ml" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="largeML" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="mediumML" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="smallML" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="shots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoffeeShotEntity" inverseName="coffeeInfo" inverseEntity="CoffeeShotEntity"/>
     </entity>
-    <entity name="CoffeeShot" representedClassName="CoffeeShot" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="ml" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="coffeeInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoffeeInfo" inverseName="shots" inverseEntity="CoffeeInfo"/>
+    <entity name="CoffeeShotEntity" representedClassName="CoffeeShotEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="ml" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="coffeeInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoffeeInfoEntity" inverseName="shots" inverseEntity="CoffeeInfoEntity"/>
     </entity>
     <elements>
-        <element name="CoffeeInfo" positionX="-54" positionY="0" width="128" height="119"/>
-        <element name="CoffeeShot" positionX="-63" positionY="-9" width="128" height="74"/>
+        <element name="CoffeeInfoEntity" positionX="-54" positionY="0" width="128" height="119"/>
+        <element name="CoffeeShotEntity" positionX="-63" positionY="-9" width="128" height="74"/>
     </elements>
 </model>

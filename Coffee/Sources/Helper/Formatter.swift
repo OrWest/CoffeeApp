@@ -9,6 +9,17 @@
 import Foundation
 
 class Formatter {
+    enum Volume: String {
+        case ml
+    }
+    
+    enum Mass: String {
+        case mg
+    }
+    
+    static var volume: Volume = .ml
+    static var mass: Mass = .mg
+    
     private static let dateWithoutTimeFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -22,13 +33,21 @@ class Formatter {
         formatter.timeStyle = .short
         return formatter
     }()
-
-    static func formatMg(_ value: Int) -> String {
-        return "\(value) mg"
+    
+    // MARK: - LocalizedFormatter
+    
+    static func formatCaffeineIn100ml(_ value: Int16) -> String {
+        return "\(formatMass(value))/\(formatVolume(100))"
     }
 
-    static func formatMl(_ value: Int) -> String {
-        return "\(value) ml"
+    // MARK: - General formatter
+    
+    static func formatVolume(_ value: Int16) -> String {
+        return "\(value) \(volume.rawValue)"
+    }
+    
+    static func formatMass(_ value: Int16) -> String {
+        return "\(value) \(mass.rawValue)"
     }
 
     static func formatPercent(_ value: Int) -> String {
