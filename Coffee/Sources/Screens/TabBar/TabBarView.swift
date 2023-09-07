@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-extension Array {
-    subscript(safe index: Index) -> Element? {
-        guard index < self.count else { return nil }
-        
-        return self[index]
-    }
-}
-
 struct TabBarView: View {
     @ObservedObject var viewModel: TabBarViewModel
     
